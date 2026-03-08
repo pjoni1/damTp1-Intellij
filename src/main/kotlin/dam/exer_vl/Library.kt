@@ -1,9 +1,9 @@
 package dam.exer_vl
 
-class Library {
+class Library(val name : String) {
     val books = ArrayList<Book>()
 
-    fun addBook(book: DigitalBook){
+    fun addBook(book: Book){
         books.add(book)
         incrementCount()
     }
@@ -52,8 +52,10 @@ class Library {
 
     fun searchByAuthor(author: String){
         for (book in books) {
-            println("-------------")
-            println(book)
+            if(book.author == author){
+                println("-------------")
+                println(book)
+            }
         }
     }
 

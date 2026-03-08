@@ -1,6 +1,6 @@
 package dam.exer_vl
 
-open class Book (
+abstract class Book (
     val title : String,
     val author : String,
     val publicationYear : Int,
@@ -34,6 +34,8 @@ open class Book (
                 field = value
             }
         }
+
+    abstract fun getStorageInfo() : String
 
     override fun toString(): String {
         return "Book(Title: '$title', Author: '$author', PublicationYear: $publicationYear, AvailableCopies: $availableCopies)"
